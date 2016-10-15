@@ -1,0 +1,5 @@
+----Start Query----
+Complete adding tweet
+Complete adding favorite
+----End Query-----
+Total execution time in seconds: 3.7006521224976
