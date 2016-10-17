@@ -1,0 +1,35 @@
+<html>
+	<head></head>
+	<body>
+		<h3 class="text"></h3>
+		<div class="btn">
+			<input type="text" class="assign"/>
+			<button type="button" class="btn-add">Add</button>
+			<button type="button" class="btn-clear">Clear</button>
+		</div>
+	</body>
+</html>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/js.cookie.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        //Cookies.remove('pid');
+        //Cookies.remove('agreement');
+        console.log(Cookies.get("pid"));
+        $(".text").text("PID: "+Cookies.get("pid"));
+        $(".btn-clear").click(function(){
+        	Cookies.remove('pid');
+        	location.reload();
+        });
+        $(".btn-add").click(function(){
+        	var cookies_expire = new Date();
+    		cookies_expire.setTime(cookies_expire.getTime() + (30*60*1000));// expires after 30 minute
+        	Cookies.set("pid",$(".assign").val(),{expires:cookies_expire});
+        	location.reload();
+        });
+    });
+</script>

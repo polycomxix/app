@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SNS Research - How often do you Post in 2016? </title>
+    <link rel='shortcut icon' type='image/x-icon' href='.images/favicon.ico' />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/one-page-wonder.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+     
+      t._e = [];
+      t.ready = function(f) {
+            t._e.push(f);
+          };
+         
+          return t;
+        }(document, "script", "twitter-wjs"));
+    </script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../">SNS Research</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="../#overview">Research Overview</a>
+                    </li>
+                    <li>
+                        <a href="../#quiz">Questionnaire & Quizzes</a>
+                    </li>
+                    <li>
+                        <a href="../#about">About Us</a>
+                    </li>
+                    <li>
+                        <a href="../#contact">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="section-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-12">
+                    <div class="twitter-result result-container">
+                        <h2><strong>How often do you post in 2016?</strong></h2>
+                        <div class="quiz-processing text-center">
+                            <img src="../images/ellipsis.gif" alt=""/>
+                            <div class="quiz-processing-msg">connecting to account</div>
+                        </div>
+                        <div class="result-area">
+                            <canvas id="myCanvas" style="position:absolute;"></canvas>
+                            <div id="fb-quiz-result" class="thumbnail">
+                                <img src="../images/fbquiz1.jpg" alt=""/>
+                            </div>
+                            <div class="connect-button text-center">
+                                <button type="button"class="btn btn-primary btn-fb btn-connect-fb" data-toggle="modal" data-target="#modal-agreement">
+                                    <img src="../images/fb_logo_white.png" alt="" width="20"/>
+                                    Connect with Facebook
+                                </button>
+                            </div>
+                        </div>
+                        <div class="share-button text-center" style="display:none;">
+
+                            <button type="button"class="btn btn-primary btn-fb"> 
+                                <img src="../images/fb_logo_white.png" alt="" width="20"/>
+                                Share on Facebook
+                            </button>
+                            <button type="button"class="btn btn-primary btn-twitter btn-tweet">
+                                <img src="../images/twitter_logo_white.png" alt="" width="20"/>
+                                Tweet on Twitter
+                            </button>
+                        </div>
+                    </div>  
+                </div>
+                <div id="quiz" class="col-md-4 col-sm-12" >
+                    <h3>Recommend for you</h3>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-6">
+                            <div class="thumbnail text-center">
+                                <img src="../images/questionnaire-image.jpg" alt="">
+                                <div class="caption">
+                                    <h3>SNS Usage Questionnaire</h3>
+                                    <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+                                    <button type="button"class="btn btn-info" onclick="javascript:window.location.href = '../survey.html'">Let's start</button> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-6">
+                            <div class="thumbnail text-center">
+                                <img src="../images/twitterquiz.jpg" alt="">
+                                <div class="caption">
+                                    <h3>How often do you Tweet in 2016?</h3>
+                                    <button type="button"class="btn btn-info"  onclick="javascript:window.location.href = '../quiz/twitter.html'">Let's start</button>  
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="col-md-12 col-sm-6">
+                            <div class="thumbnail text-center">
+                                <img src="../images/igquiz.jpg" alt="">
+                                <div class="caption">
+                                    <h3>Your popular IG media in 2016</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    <button type="button"class="btn btn-info" onclick="javascript:window.location.href = '../quiz/instagram.html'">Let's start</button> 
+                                </div>
+                            </div>
+                        </div>-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+    
+    <!-- Dialog -->
+    <div id="modal-agreement" class="modal fade" tabindex="-1" role="dialog" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Terms of Agreement</h4>
+          </div>
+          <div class="modal-body">
+            <p>Please read the terms of agreement carefully. By clicking “Accept” button below, you acknowledge that you have read, understand, and accept this consent document.</p>
+            <p>If you disagree with this term then you cannot process to do the questionnaire and/or quizzes.</p>
+            <ol>
+                <li><strong>Background.</strong> This research is supervised by Professor Michiko Ohkura, College of Engineering, Shibaura Institute of Technology.</li>
+                <li><strong>Purpose.</strong> The research aims to study the usage behavior of social networking sites (SNSs). We designed an application for collecting SNS usage behavior data via self-report questionnaire and quizzes.</li>
+                <li>
+                    <div><strong>Methods.</strong> We will ask for your help to cooperate in our research by completing questionnaire and doing quizzes.<div>
+                    <ul>
+                        <li>Questionnaire: The self-report questionnaire has three parts, which are personal information, social network usage and social network behavior. It will take from 8-15 minutes depending on your selection speed.</li>
+                        <li>Quiz: Each quiz is connected with different SNSs. You need an authorization from your SNSs to do these quizzes. It will take a few minutes depending on your internet speed.</li>
+                    </ul>
+                </li>
+                <li><strong>Information Collection.</strong> We collect your data from questionnaire and also retrieve data from SNSs you connected.</li>
+                <li><strong>Handing of Information.</strong> We use this information for research purpose on studying the usage behavior of SNSs. Your information will be kept strictly confidential as an anonymous. The result of this study will be analyzed and might be published in scientific conference.</li>
+            </ol>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success btn-agree">Agree</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Decline</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- /Dialog -->
+
+    <!-- Footer -->
+    <div class="section-container section-container-footer">
+        <div class="container">
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="site-info">
+                            <a href="../termsofuse.html">Terms of Use</a> | <a href="../privacy.html">Privacy Policy</a> 
+                        </div>
+                        <div class="text-left">   
+                            Copyright &copy; 2016 Ohkura Lab All Rights Reserved.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- /.container -->
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/js.cookie.js"></script>
+
+</body>
+
+</html>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $.urlParam = function(name){
+            var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+            if (results==null){
+               return null;
+            }
+            else{
+               return results[1] || 0;
+            }
+        }
+        console.log($.urlParam('approved'));
+        if($.urlParam('approved')=="true")
+        {
+            $(".quiz-processing").show();
+            $(".quiz-processing-msg").text("processing results");
+            $(".result-area").hide();
+            $(".connect-button").hide();
+            $.get("../facebook/get_fb_quizresult.php", function (data) {
+                console.log(data);
+                if(data['success'] == true)
+                {
+                    showQuizResult(data);
+                    //console.log(data['content']);
+                    /*var html ="";
+                    for(i=0; i<data['content'].length; i++)
+                    {
+                        html += "<div>Year:"+data['content'][i][0]+ " Like:"+data['content'][i][2]+"</div><div><img src='"+decodeURIComponent(data['content'][i][1])+"' alt='' /><div>";
+                    }
+                    $(".result-area").append(html);*/
+
+                }
+                    //showQuizResult(data);
+                
+            },'json');
+        }
+
+        function showQuizResult(data)
+        { 
+            $(".quiz-processing").hide();
+            $(".result-area").show();
+
+
+            var c = document.getElementById("myCanvas");
+            c.width = 1200;
+            c.height = 630;
+            var ctx = c.getContext("2d");
+            var img=new Image();
+            img.onload=start;
+            img.src="../images/fbquiz_result.jpg";
+            function start(){
+                ctx.drawImage(img,0,0);
+                ctx.font = "96px Tahoma bold";
+                ctx.fillStyle =  "#ffffff";
+                ctx.textAlign="center";
+                ctx.fillText(data['avg'], 645,440);
+
+                ctx.font = "45px Tahoma bold";
+                ctx.fillText(data['time'], 977,500);
+                var imgDataUrl = c.toDataURL("image/png");
+                $("#fb-quiz-result img").attr("src", imgDataUrl);
+                c.remove();
+
+                $(".share-button").show();
+            }
+        }
+        $("#modal-agreement").on('shown.bs.modal',function(event){
+            var button = $(event.relatedTarget);
+            $(".btn-agree").click(function(){
+                Cookies.remove('agreement');
+                Cookies.set("agreement","1");
+                $('#modal-agreement').modal('hide');
+
+                $(".quiz-processing-msg").text("connecting to account");
+                $(".quiz-processing").show();
+                $(".result-area").hide();
+                window.location = "../facebook/fbcallback.php";
+            });
+        });
+
+        /*$(".btn-connect-fb").click(function(){
+            $(".quiz-processing-msg").text("connecting to account");
+            $(".quiz-processing").show();
+            $(".result-area").hide();
+            window.location = "../facebook/fbcallback.php";
+        });*/
+
+        //$(".twitter-result").hide();
+        /*$.get("./twitter/get_tweet_data.php", function (data) {
+            console.log(data);
+            console.log(data['user_id']);
+            $(".loading").hide();
+            $(".twitter-result").show();
+        },'json');*/
+        /*$(".btn-tweet").click(function(){
+            var loc = 'http://' + window.location.hostname + window.location.pathname;
+            var title  = escape('How often do you Tweet?');
+
+            window.open('http://twitter.com/share?text=' + title + '&url=' + loc + '&', 'twitterwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+        });*/
+        
+    });
+</script>
