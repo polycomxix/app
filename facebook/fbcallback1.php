@@ -2,8 +2,6 @@
 	session_start();
 	include_once("config.php");
 
-	if(isset($_GET['lang']))
-		$_SESSION['lang']= $_GET['lang'];
 
 	try{
 		$accessToken = $helper->getAccessToken();
@@ -16,15 +14,22 @@
 		echo 'Facebook SDK returned an error: ' . $e->getMessage();
 		exit;
 	}
-	
 
 	if (isset($accessToken)) {
 		$_SESSION['access_token'] = (string) $accessToken;
-		header("Location: ../".$_SESSION['lang']."/facebook.html?approved=true"); 
+		header('Location: ../quiz/facebook1.html?approved=true'); 
+		//header('Location: ../facebook/get_fb_quizresult.php'); 
+		//header('Location: ../facebook/service_get_fb_data.php'); 
+  		// Logged in!
+	  	/*$response = $fb->get('/me?fields=id,name', $accessToken);
+	  	$user = $response->getGraphUser();
+	  	print_r($user);*/
 
+	  	// Now you can redirect to another page and use the
+	  	// access token from $_SESSION['facebook_access_token']
 	}
 	else{
-		$loginUrl = $helper->getLoginUrl('http://sns.jin.ise.shibaura-it.ac.jp/app/facebook/fbcallback.php', $permissions);
+		$loginUrl = $helper->getLoginUrl('http://sns.jin.ise.shibaura-it.ac.jp/app/facebook/fbcallback1.php', $permissions);
 		header("Location: ".$loginUrl);
 	}
 

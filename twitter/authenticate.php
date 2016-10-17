@@ -4,6 +4,9 @@
 	require 'autoload.php';
 	use Abraham\TwitterOAuth\TwitterOAuth;
 	
+	if(isset($_GET['lang']))
+		$_SESSION['lang']= $_GET['lang'];
+
 	//fresh authentication
 	$connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET);
 	$request_token = $connection->oauth('oauth/request_token', array('oauth_callback' => OAUTH_CALLBACK));

@@ -257,7 +257,7 @@ $(function(){
             console.log(sdata);
             $.ajax({
                 type: "POST",
-                url: "./php/survey.php",
+                url: "../php/survey.php",
                 dataType: 'json',
                 data: 
                 { 
@@ -339,7 +339,7 @@ $(function(){
             console.log(sdata_c);
             $.ajax({
                 type: "POST",
-                url: "./php/survey.php",
+                url: "../php/survey.php",
                 dataType: 'json',
                 data: 
                 { 
@@ -349,7 +349,7 @@ $(function(){
                     console.log(data.status);
                     $(".screen-loading").hide();
                     setTimeout(function(){
-                        window.location.href="./thanks.html?point="+data.total;
+                        window.location.href="../"+$('html').attr('lang')+"/thanks.html?point="+data.total;
                     },1000);
                     
                 },
